@@ -1,0 +1,10 @@
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\bin\Debug\ProyectoApp.exe.config
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\bin\Debug\ProyectoApp.exe
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\bin\Debug\ProyectoApp.pdb
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.csproj.AssemblyReference.cache
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.Form1.resources
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.Properties.Resources.resources
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.csproj.GenerateResource.cache
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.csproj.CoreCompileInputs.cache
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.exe
+C:\Users\matir\source\repos\ProyectoApp\ProyectoApp\obj\Debug\ProyectoApp.pdb
