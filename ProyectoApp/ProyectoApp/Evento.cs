@@ -1,7 +1,5 @@
 ﻿using System;
 
-namespace ProyectoApp
-{
 public class Evento
 {
     public string MailCreador { get; set; }
