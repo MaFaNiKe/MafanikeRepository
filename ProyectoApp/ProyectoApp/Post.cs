@@ -6,22 +6,22 @@ namespace ProyectoApp
     {
         private static int contadorIds = 0;
         public int Id { get; }
-        public string CorreoCreador { get; set; }
-        public string NombreCreador { get; set; } 
-        public DateTime FechaHora { get; }
+        public string MailUsuario { get; set; } // Agregado
+        public string NombreUsuario { get; set; } // Agregado
+        public DateTime Fecha { get; } // Renombrado de FechaHora a Fecha
         public string Texto { get; }
         public int CantLikes { get; private set; }
-        public string AreaInteres { get; set; }
+        public string Categoria { get; set; } // Renombrado de AreaInteres a Categoria
 
-        public Post(string correoCreador, string nombreCreador, DateTime fechaHora, string texto, string areaInteres)
+        public Post(string mailUsuario, string nombreUsuario, DateTime fecha, string texto, string categoria)
         {
-            CorreoCreador = correoCreador;
-            NombreCreador = nombreCreador;
+            MailUsuario = mailUsuario; // Agregado
+            NombreUsuario = nombreUsuario; // Agregado
             Id = ++contadorIds;
-            FechaHora = fechaHora;
+            Fecha = fecha; // Renombrado de FechaHora a Fecha
             Texto = texto;
             CantLikes = 0;
-            AreaInteres = areaInteres;
+            Categoria = categoria; // Renombrado de AreaInteres a Categoria
         }
 
         public void IncrementarLikes()
@@ -31,7 +31,7 @@ namespace ProyectoApp
 
         public override string ToString()
         {
-            return $"Id: {Id}, Fecha/Hora: {FechaHora}, Texto: {Texto}, Likes: {CantLikes}, Intereses: {AreaInteres}";
+            return $"Id: {Id}, Fecha: {Fecha}, Texto: {Texto}, Likes: {CantLikes}, Categoría: {Categoria}";
         }
     }
 }

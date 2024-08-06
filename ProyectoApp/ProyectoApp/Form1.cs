@@ -12,7 +12,7 @@ using System.Collections;
 using System.Diagnostics;
 
 
-namespace ProyectoApp
+namespace ProyectoAp
 {
     public partial class Form1 : Form
     {
@@ -52,14 +52,14 @@ namespace ProyectoApp
             panelCrearEvento.Visible = false;
             // Mostrar el panel recibido como parámetro
             panelAMostrar.Visible = true;
-            if (panelAMostrar == panelPrincipal) 
+            if (panelAMostrar == panelPrincipal)
             {
                 if (post_o_evento == true)
                 {
                     postIndice = 0;
                     MostrarPosts(postIndice);
                 }
-                else if (post_o_evento == false) 
+                else if (post_o_evento == false)
                 {
                     eventoIndice = 0;
                     MostrarEvento(eventoIndice);
@@ -101,17 +101,26 @@ namespace ProyectoApp
 
         private void InicializarEventos()
         {
-            Evento evento1 = new Evento("juan@gmail.com", "Juan Pérez", DateTime.Now.AddDays(-5), "Concierto de rock en el parque central.", "Música");
-            Evento evento2 = new Evento("maria@gmail.com", "María Gómez", DateTime.Now.AddDays(-10), "Exposición de arte contemporáneo en la galería principal.", "Arte");
-            Evento evento3 = new Evento("carlos@gmail.com", "Carlos Martínez", DateTime.Now.AddDays(-3), "Competencia de videojuegos en el centro de eventos.", "Videojuegos");
-            Evento evento4 = new Evento("ana@gmail.com", "Ana López", DateTime.Now.AddDays(-7), "Clase magistral de cocina internacional en el instituto culinario.", "Cocina");
-            Evento evento5 = new Evento("pedro@gmail.com", "Pedro Rodríguez", DateTime.Now.AddDays(-2), "Seminario de tecnología y nuevas tendencias en la universidad.", "Tecnología");
+            DateTime now = DateTime.Now;
+            Evento evento1 = new Evento("juan@gmail.com", "Juan Pérez", now, "Parque Central", new DateTime(2024, 8, 10, 19, 0, 0), "Concierto de rock en el parque central.", "Música");
+            Evento evento2 = new Evento("maria@gmail.com", "María Gómez", now, "Galería Principal", new DateTime(2024, 8, 10, 20, 0, 0), "Exposición de arte contemporáneo en la galería principal.", "Arte");
+            Evento evento3 = new Evento("carlos@gmail.com", "Carlos Martínez", now, "Centro de Eventos", new DateTime(2024, 8, 11, 16, 35, 0), "Competencia de videojuegos en el centro de eventos.", "Videojuegos");
+            Evento evento4 = new Evento("ana@gmail.com", "Ana López", now, "Instituto Culinario", new DateTime(2024, 8, 11, 23, 15, 0), "Clase magistral de cocina internacional en el instituto culinario.", "Cocina");
+            Evento evento5 = new Evento("pedro@gmail.com", "Pedro Rodríguez", now, "Universidad", new DateTime(2024, 8, 12, 15, 25, 0), "Seminario de tecnología y nuevas tendencias en la universidad.", "Tecnología");
+
+            eventos.Add(evento1);
+            eventos.Add(evento2);
+            eventos.Add(evento3);
+            eventos.Add(evento4);
+            eventos.Add(evento5);
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // Configurar ListView al cargar el formulario
             ConfigurarListView();
             MostrarPosts(postIndice);
+            MostrarEvento(eventoIndice);
         }
 
         private void CrearCuenta_Click(object sender, EventArgs e)
@@ -278,7 +287,7 @@ namespace ProyectoApp
             }
 
             Usuario usuarioEncontrado = null;
-            for (int i = 0; i < usuarios.Count ; i++)
+            for (int i = 0; i < usuarios.Count; i++)
             {
                 if (usuarios[i].Mail == correoInicio && usuarios[i].Contraseña == contraseñaInicio)
                 {
@@ -388,7 +397,7 @@ namespace ProyectoApp
             LimpiarFormularioCrearPost();
         }
 
-        private void CrearEvento() 
+        private void CrearEvento()
         {
             string textoIngresado = textBoxContEvento.Text.Trim();
             if (comboBoxAreaEvento.SelectedItem == null)
@@ -399,19 +408,18 @@ namespace ProyectoApp
             string areaInteresEvento = comboBoxAreaEvento.SelectedItem.ToString();
             DateTime fechaHoraCreacionEvento = DateTime.Now;
 
-            if (usuarioActual == null) 
+            if (usuarioActual == null)
             {
                 MessageBox.Show("Debe iniciar sesión para crear un post.");
                 return;
             }
-
-            Evento nuevoEvento = new Evento(usuarioActual.Mail, usuarioActual.Nombre, fechaHoraCreacionEvento, textoIngresado, areaInteresEvento );
+            Evento nuevoEvento = new Evento(usuarioActual.Mail, usuarioActual.Nombre, fechaHoraCreacionEvento, textoIngresado, areaInteresEvento);
             eventos.Add(nuevoEvento);
             MessageBox.Show("Evento Creado y publicado Exitosamente");
             LimpiarFormularioCrearEvento();
 
         }
-        
+
         private void LimpiarFormularioCrearPost()
         {
             textBoxContPost.Clear();
@@ -423,35 +431,38 @@ namespace ProyectoApp
             textBoxContenidoEvento.Clear();
             comboBoxAreaEvento.SelectedIndex = -1;
         }
-       
+
         private void MostrarPosts(int indicePosts)
         {
-            if (posts.Count == 0) return;
+            if (posts.Count == 0 || indicePosts < 0 || indicePosts >= posts.Count)
+            {
+                MessageBox.Show("No hay posts disponibles.");
+                return;
+            }
 
             Post postActual = posts[indicePosts];
-            //panelPostPrincipal.Controls.Clear();
-            labelpost.Text = postActual.NombreCreador;
+            labelpost.Text = postActual.NombreUsuario;
             textBoxContenidoPost.Text = postActual.Texto;
-            Fecha.Text = postActual.FechaHora.ToString("g");
+            Fecha.Text = postActual.Fecha.ToString("g");
             Likes.Text = "Likes: " + postActual.CantLikes;
-            labelAreaInteresPost.Text = $"Área de Interés: {postActual.AreaInteres}";
-            
-
+            labelAreaInteresPost.Text = $"Área de Interés: {postActual.Categoria}";
         }
 
         private void MostrarEvento(int indiceEvento)
         {
-            if (indiceEvento >= 0 && indiceEvento < eventos.Count)
+            if (eventos.Count == 0 || indiceEvento < 0 || indiceEvento >= eventos.Count)
             {
-                Evento eventoActual = eventos[indiceEvento];
-                labelEvento.Text = eventoActual.NombreCreador;
-                textBoxContenidoEvento.Text = eventoActual.Descripcion;
-                labelFechaEvento.Text = eventoActual.FechaHoraCreacion.ToString("g");
-                labelLikesEvento.Text = "Likes: " + eventoActual.CantLikes;
-                labelTemaEvento.Text = $"Área de Interés: {eventoActual.AreaInteres}";
+                MessageBox.Show("No hay eventos disponibles.");
+                return;
             }
-        }
 
+            Evento eventoActual = eventos[indiceEvento];
+            labelEvento.Text = eventoActual.NombreCreador;
+            textBoxContenidoEvento.Text = eventoActual.Descripcion;
+            labelFechaEvento.Text = eventoActual.FechaHoraCreacion.ToString("g");
+            labelLikesEvento.Text = "Likes: " + eventoActual.CantLikes;
+            labelTemaEvento.Text = $"Área de Interés: {eventoActual.AreaInteres}";
+        }
         private void crearPostToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MostrarPanel(panelCrearPost);
@@ -465,8 +476,15 @@ namespace ProyectoApp
 
         private void buttonSiguientePost_Click(object sender, EventArgs e)
         {
-            postIndice = (postIndice + 1) % posts.Count;
-            MostrarPosts(postIndice);
+            if (posts.Count > 0)
+            {
+                postIndice = (postIndice + 1) % posts.Count;
+                MostrarPosts(postIndice);
+            }
+            else
+            {
+                MessageBox.Show("No hay posts disponibles.");
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -492,8 +510,15 @@ namespace ProyectoApp
 
         private void buttonSiguienteEvento_Click(object sender, EventArgs e)
         {
-            eventoIndice = (eventoIndice + 1) % eventos.Count;
-            MostrarEvento(eventoIndice);
+            if (eventos.Count > 0)
+            {
+                eventoIndice = (eventoIndice + 1) % eventos.Count;
+                MostrarEvento(eventoIndice);
+            }
+            else
+            {
+                MessageBox.Show("No hay eventos disponibles.");
+            }
         }
 
         private void verEventosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -504,6 +529,32 @@ namespace ProyectoApp
         private void verPostToolStripMenuItem_Click(object sender, EventArgs e)
         {
             post_o_evento = true;
+        }
+
+        private void buttonAnteriorEvento_Click(object sender, EventArgs e)
+        {
+            if (eventos.Count > 0)
+            {
+                eventoIndice = (eventoIndice - 1 + eventos.Count) % eventos.Count;
+                MostrarEvento(eventoIndice);
+            }
+            else
+            {
+                MessageBox.Show("No hay eventos disponibles.");
+            }
+        }
+
+        private void buttonAnteriorPost_Click(object sender, EventArgs e)
+        {
+            if (posts.Count > 0)
+            {
+                postIndice = (postIndice - 1 + posts.Count) % posts.Count;
+                MostrarPosts(postIndice);
+            }
+            else
+            {
+                MessageBox.Show("No hay posts disponibles.");
+            }
         }
     }
 }

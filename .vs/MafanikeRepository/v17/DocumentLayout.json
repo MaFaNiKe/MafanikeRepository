@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoApp\\ProyectoApp\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoApp\\ProyectoApp\\Post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoApp\\ProyectoApp\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoApp\\ProyectoApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoApp\\ProyectoApp\\Evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Evento.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Evento.cs",
+              "RelativeDocumentMoniker": "ProyectoApp\\ProyectoApp\\Evento.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Evento.cs",
+              "RelativeToolTip": "ProyectoApp\\ProyectoApp\\Evento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T19:42:46.739Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Form1.cs",
+              "RelativeDocumentMoniker": "ProyectoApp\\ProyectoApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Form1.cs",
+              "RelativeToolTip": "ProyectoApp\\ProyectoApp\\Form1.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T21:21:24.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Program.cs",
+              "RelativeDocumentMoniker": "ProyectoApp\\ProyectoApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Program.cs",
+              "RelativeToolTip": "ProyectoApp\\ProyectoApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T00:08:21.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Usuario.cs",
+              "RelativeDocumentMoniker": "ProyectoApp\\ProyectoApp\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Usuario.cs",
+              "RelativeToolTip": "ProyectoApp\\ProyectoApp\\Usuario.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T00:08:19.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Post.cs",
+              "RelativeDocumentMoniker": "ProyectoApp\\ProyectoApp\\Post.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Rodr\u00EDguez\\source\\repos\\MaFaNiKe\\MafanikeRepository\\ProyectoApp\\ProyectoApp\\Post.cs",
+              "RelativeToolTip": "ProyectoApp\\ProyectoApp\\Post.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T00:08:24.478Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

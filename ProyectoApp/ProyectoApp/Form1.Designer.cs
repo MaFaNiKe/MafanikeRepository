@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.panelCrearCuenta = new System.Windows.Forms.Panel();
             this.richTextBoxDetallesUsuario = new System.Windows.Forms.RichTextBox();
             this.CrearCuenta = new System.Windows.Forms.Button();
@@ -66,17 +66,31 @@
             this.iniciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPerfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.buttonAnteriorPost = new System.Windows.Forms.Button();
-            this.buttonSiguientePost = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelPostPrincipal = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelAreaInteresPost = new System.Windows.Forms.Label();
             this.Fecha = new System.Windows.Forms.Label();
+            this.buttonAnteriorPost = new System.Windows.Forms.Button();
             this.Likes = new System.Windows.Forms.Label();
+            this.buttonSiguientePost = new System.Windows.Forms.Button();
             this.textBoxContenidoPost = new System.Windows.Forms.TextBox();
             this.labelpost = new System.Windows.Forms.Label();
+            this.panelEventoPrincipal = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelTemaEvento = new System.Windows.Forms.Label();
+            this.labelFechaEvento = new System.Windows.Forms.Label();
+            this.buttonAnteriorEvento = new System.Windows.Forms.Button();
+            this.labelLikesEvento = new System.Windows.Forms.Label();
+            this.buttonSiguienteEvento = new System.Windows.Forms.Button();
+            this.textBoxContenidoEvento = new System.Windows.Forms.TextBox();
+            this.labelEvento = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearPostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verPostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelVerPerfiles = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.PestañaUsuariosCreados = new System.Windows.Forms.Label();
@@ -110,19 +124,6 @@
             this.buttonVolver2 = new System.Windows.Forms.Button();
             this.labelCrearPost = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelEventoPrincipal = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelTemaEvento = new System.Windows.Forms.Label();
-            this.labelFechaEvento = new System.Windows.Forms.Label();
-            this.buttonAnteriorEvento = new System.Windows.Forms.Button();
-            this.labelLikesEvento = new System.Windows.Forms.Label();
-            this.buttonSiguienteEvento = new System.Windows.Forms.Button();
-            this.textBoxContenidoEvento = new System.Windows.Forms.TextBox();
-            this.labelEvento = new System.Windows.Forms.Label();
             this.panelCrearEvento = new System.Windows.Forms.Panel();
             this.buttonPublicarEvento = new System.Windows.Forms.Button();
             this.comboBoxAreaEvento = new System.Windows.Forms.ComboBox();
@@ -131,14 +132,15 @@
             this.textBoxContEvento = new System.Windows.Forms.TextBox();
             this.buttonVolverAPanelEventos = new System.Windows.Forms.Button();
             this.labelCrearEvento = new System.Windows.Forms.Label();
-            this.crearEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verPostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelCrearCuenta.SuspendLayout();
             this.panelInicioSesion.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.panelPostPrincipal.SuspendLayout();
+            this.panelEventoPrincipal.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.panelVerPerfiles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.interesesBindingSource)).BeginInit();
@@ -146,10 +148,8 @@
             this.panelPerfil.SuspendLayout();
             this.panelCrearPost.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.panelEventoPrincipal.SuspendLayout();
             this.panelCrearEvento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearCuenta
@@ -534,24 +534,14 @@
             this.panelPrincipal.Visible = false;
             this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // buttonAnteriorPost
+            // flowLayoutPanel2
             // 
-            this.buttonAnteriorPost.Location = new System.Drawing.Point(8, 166);
-            this.buttonAnteriorPost.Name = "buttonAnteriorPost";
-            this.buttonAnteriorPost.Size = new System.Drawing.Size(75, 23);
-            this.buttonAnteriorPost.TabIndex = 3;
-            this.buttonAnteriorPost.Text = "Anterior";
-            this.buttonAnteriorPost.UseVisualStyleBackColor = true;
-            // 
-            // buttonSiguientePost
-            // 
-            this.buttonSiguientePost.Location = new System.Drawing.Point(216, 164);
-            this.buttonSiguientePost.Name = "buttonSiguientePost";
-            this.buttonSiguientePost.Size = new System.Drawing.Size(77, 25);
-            this.buttonSiguientePost.TabIndex = 2;
-            this.buttonSiguientePost.Text = "Siguiente Post";
-            this.buttonSiguientePost.UseVisualStyleBackColor = true;
-            this.buttonSiguientePost.Click += new System.EventHandler(this.buttonSiguientePost_Click);
+            this.flowLayoutPanel2.Controls.Add(this.panelPostPrincipal);
+            this.flowLayoutPanel2.Controls.Add(this.panelEventoPrincipal);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(9, 36);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(613, 209);
+            this.flowLayoutPanel2.TabIndex = 4;
             // 
             // panelPostPrincipal
             // 
@@ -567,6 +557,15 @@
             this.panelPostPrincipal.Name = "panelPostPrincipal";
             this.panelPostPrincipal.Size = new System.Drawing.Size(300, 200);
             this.panelPostPrincipal.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(260, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Post";
             // 
             // labelAreaInteresPost
             // 
@@ -586,6 +585,16 @@
             this.Fecha.TabIndex = 22;
             this.Fecha.Text = "fecha";
             // 
+            // buttonAnteriorPost
+            // 
+            this.buttonAnteriorPost.Location = new System.Drawing.Point(8, 166);
+            this.buttonAnteriorPost.Name = "buttonAnteriorPost";
+            this.buttonAnteriorPost.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnteriorPost.TabIndex = 3;
+            this.buttonAnteriorPost.Text = "Anterior";
+            this.buttonAnteriorPost.UseVisualStyleBackColor = true;
+            this.buttonAnteriorPost.Click += new System.EventHandler(this.buttonAnteriorPost_Click);
+            // 
             // Likes
             // 
             this.Likes.AutoSize = true;
@@ -594,6 +603,16 @@
             this.Likes.Size = new System.Drawing.Size(32, 13);
             this.Likes.TabIndex = 21;
             this.Likes.Text = "Likes";
+            // 
+            // buttonSiguientePost
+            // 
+            this.buttonSiguientePost.Location = new System.Drawing.Point(216, 164);
+            this.buttonSiguientePost.Name = "buttonSiguientePost";
+            this.buttonSiguientePost.Size = new System.Drawing.Size(77, 25);
+            this.buttonSiguientePost.TabIndex = 2;
+            this.buttonSiguientePost.Text = "Siguiente Post";
+            this.buttonSiguientePost.UseVisualStyleBackColor = true;
+            this.buttonSiguientePost.Click += new System.EventHandler(this.buttonSiguientePost_Click);
             // 
             // textBoxContenidoPost
             // 
@@ -615,6 +634,98 @@
             this.labelpost.TabIndex = 0;
             this.labelpost.Text = "Nombre del Usuario";
             // 
+            // panelEventoPrincipal
+            // 
+            this.panelEventoPrincipal.Controls.Add(this.label2);
+            this.panelEventoPrincipal.Controls.Add(this.labelTemaEvento);
+            this.panelEventoPrincipal.Controls.Add(this.labelFechaEvento);
+            this.panelEventoPrincipal.Controls.Add(this.buttonAnteriorEvento);
+            this.panelEventoPrincipal.Controls.Add(this.labelLikesEvento);
+            this.panelEventoPrincipal.Controls.Add(this.buttonSiguienteEvento);
+            this.panelEventoPrincipal.Controls.Add(this.textBoxContenidoEvento);
+            this.panelEventoPrincipal.Controls.Add(this.labelEvento);
+            this.panelEventoPrincipal.Location = new System.Drawing.Point(309, 3);
+            this.panelEventoPrincipal.Name = "panelEventoPrincipal";
+            this.panelEventoPrincipal.Size = new System.Drawing.Size(300, 200);
+            this.panelEventoPrincipal.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(256, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Evento";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // labelTemaEvento
+            // 
+            this.labelTemaEvento.AutoSize = true;
+            this.labelTemaEvento.Location = new System.Drawing.Point(136, 131);
+            this.labelTemaEvento.Name = "labelTemaEvento";
+            this.labelTemaEvento.Size = new System.Drawing.Size(37, 13);
+            this.labelTemaEvento.TabIndex = 23;
+            this.labelTemaEvento.Text = "Tema:";
+            // 
+            // labelFechaEvento
+            // 
+            this.labelFechaEvento.AutoSize = true;
+            this.labelFechaEvento.Location = new System.Drawing.Point(4, 150);
+            this.labelFechaEvento.Name = "labelFechaEvento";
+            this.labelFechaEvento.Size = new System.Drawing.Size(34, 13);
+            this.labelFechaEvento.TabIndex = 22;
+            this.labelFechaEvento.Text = "fecha";
+            // 
+            // buttonAnteriorEvento
+            // 
+            this.buttonAnteriorEvento.Location = new System.Drawing.Point(8, 166);
+            this.buttonAnteriorEvento.Name = "buttonAnteriorEvento";
+            this.buttonAnteriorEvento.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnteriorEvento.TabIndex = 3;
+            this.buttonAnteriorEvento.Text = "Anterior";
+            this.buttonAnteriorEvento.UseVisualStyleBackColor = true;
+            this.buttonAnteriorEvento.Click += new System.EventHandler(this.buttonAnteriorEvento_Click);
+            // 
+            // labelLikesEvento
+            // 
+            this.labelLikesEvento.AutoSize = true;
+            this.labelLikesEvento.Location = new System.Drawing.Point(3, 131);
+            this.labelLikesEvento.Name = "labelLikesEvento";
+            this.labelLikesEvento.Size = new System.Drawing.Size(32, 13);
+            this.labelLikesEvento.TabIndex = 21;
+            this.labelLikesEvento.Text = "Likes";
+            // 
+            // buttonSiguienteEvento
+            // 
+            this.buttonSiguienteEvento.Location = new System.Drawing.Point(216, 164);
+            this.buttonSiguienteEvento.Name = "buttonSiguienteEvento";
+            this.buttonSiguienteEvento.Size = new System.Drawing.Size(77, 25);
+            this.buttonSiguienteEvento.TabIndex = 2;
+            this.buttonSiguienteEvento.Text = "Siguiente Post";
+            this.buttonSiguienteEvento.UseVisualStyleBackColor = true;
+            this.buttonSiguienteEvento.Click += new System.EventHandler(this.buttonSiguienteEvento_Click);
+            // 
+            // textBoxContenidoEvento
+            // 
+            this.textBoxContenidoEvento.Location = new System.Drawing.Point(3, 28);
+            this.textBoxContenidoEvento.Multiline = true;
+            this.textBoxContenidoEvento.Name = "textBoxContenidoEvento";
+            this.textBoxContenidoEvento.ReadOnly = true;
+            this.textBoxContenidoEvento.Size = new System.Drawing.Size(250, 100);
+            this.textBoxContenidoEvento.TabIndex = 20;
+            this.textBoxContenidoEvento.Text = "Aquí dentro va el contenido de la propia publicación, en un inicio será solo text" +
+    "o";
+            // 
+            // labelEvento
+            // 
+            this.labelEvento.AutoSize = true;
+            this.labelEvento.Location = new System.Drawing.Point(5, 6);
+            this.labelEvento.Name = "labelEvento";
+            this.labelEvento.Size = new System.Drawing.Size(100, 13);
+            this.labelEvento.TabIndex = 0;
+            this.labelEvento.Text = "Nombre del Usuario";
+            // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.Transparent;
@@ -635,16 +746,37 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(69, 19);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.perfilToolStripMenuItem.Text = "Perfil";
             this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // crearPostToolStripMenuItem
             // 
             this.crearPostToolStripMenuItem.Name = "crearPostToolStripMenuItem";
-            this.crearPostToolStripMenuItem.Size = new System.Drawing.Size(69, 19);
+            this.crearPostToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.crearPostToolStripMenuItem.Text = "Crear Post";
             this.crearPostToolStripMenuItem.Click += new System.EventHandler(this.crearPostToolStripMenuItem_Click);
+            // 
+            // crearEventoToolStripMenuItem
+            // 
+            this.crearEventoToolStripMenuItem.Name = "crearEventoToolStripMenuItem";
+            this.crearEventoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.crearEventoToolStripMenuItem.Text = "Crear Evento";
+            this.crearEventoToolStripMenuItem.Click += new System.EventHandler(this.crearEventoToolStripMenuItem_Click);
+            // 
+            // verPostToolStripMenuItem
+            // 
+            this.verPostToolStripMenuItem.Name = "verPostToolStripMenuItem";
+            this.verPostToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.verPostToolStripMenuItem.Text = "Ver Post";
+            this.verPostToolStripMenuItem.Click += new System.EventHandler(this.verPostToolStripMenuItem_Click);
+            // 
+            // verEventosToolStripMenuItem
+            // 
+            this.verEventosToolStripMenuItem.Name = "verEventosToolStripMenuItem";
+            this.verEventosToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.verEventosToolStripMenuItem.Text = "Ver Eventos";
+            this.verEventosToolStripMenuItem.Click += new System.EventHandler(this.verEventosToolStripMenuItem_Click);
             // 
             // panelVerPerfiles
             // 
@@ -659,11 +791,11 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            listViewItem17.Tag = "Nombre";
-            listViewItem18.Tag = "Apellido";
+            listViewItem1.Tag = "Nombre";
+            listViewItem2.Tag = "Apellido";
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem17,
-            listViewItem18});
+            listViewItem1,
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(3, 74);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(440, 171);
@@ -974,126 +1106,8 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1572, 741);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1572, 725);
             this.flowLayoutPanel1.TabIndex = 7;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(ProyectoApp.Usuario);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.panelPostPrincipal);
-            this.flowLayoutPanel2.Controls.Add(this.panelEventoPrincipal);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(9, 36);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(613, 209);
-            this.flowLayoutPanel2.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(260, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Post";
-            // 
-            // panelEventoPrincipal
-            // 
-            this.panelEventoPrincipal.Controls.Add(this.label2);
-            this.panelEventoPrincipal.Controls.Add(this.labelTemaEvento);
-            this.panelEventoPrincipal.Controls.Add(this.labelFechaEvento);
-            this.panelEventoPrincipal.Controls.Add(this.buttonAnteriorEvento);
-            this.panelEventoPrincipal.Controls.Add(this.labelLikesEvento);
-            this.panelEventoPrincipal.Controls.Add(this.buttonSiguienteEvento);
-            this.panelEventoPrincipal.Controls.Add(this.textBoxContenidoEvento);
-            this.panelEventoPrincipal.Controls.Add(this.labelEvento);
-            this.panelEventoPrincipal.Location = new System.Drawing.Point(309, 3);
-            this.panelEventoPrincipal.Name = "panelEventoPrincipal";
-            this.panelEventoPrincipal.Size = new System.Drawing.Size(300, 200);
-            this.panelEventoPrincipal.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(256, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Evento";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // labelTemaEvento
-            // 
-            this.labelTemaEvento.AutoSize = true;
-            this.labelTemaEvento.Location = new System.Drawing.Point(136, 131);
-            this.labelTemaEvento.Name = "labelTemaEvento";
-            this.labelTemaEvento.Size = new System.Drawing.Size(37, 13);
-            this.labelTemaEvento.TabIndex = 23;
-            this.labelTemaEvento.Text = "Tema:";
-            // 
-            // labelFechaEvento
-            // 
-            this.labelFechaEvento.AutoSize = true;
-            this.labelFechaEvento.Location = new System.Drawing.Point(4, 150);
-            this.labelFechaEvento.Name = "labelFechaEvento";
-            this.labelFechaEvento.Size = new System.Drawing.Size(34, 13);
-            this.labelFechaEvento.TabIndex = 22;
-            this.labelFechaEvento.Text = "fecha";
-            // 
-            // buttonAnteriorEvento
-            // 
-            this.buttonAnteriorEvento.Location = new System.Drawing.Point(8, 166);
-            this.buttonAnteriorEvento.Name = "buttonAnteriorEvento";
-            this.buttonAnteriorEvento.Size = new System.Drawing.Size(75, 23);
-            this.buttonAnteriorEvento.TabIndex = 3;
-            this.buttonAnteriorEvento.Text = "Anterior";
-            this.buttonAnteriorEvento.UseVisualStyleBackColor = true;
-            // 
-            // labelLikesEvento
-            // 
-            this.labelLikesEvento.AutoSize = true;
-            this.labelLikesEvento.Location = new System.Drawing.Point(3, 131);
-            this.labelLikesEvento.Name = "labelLikesEvento";
-            this.labelLikesEvento.Size = new System.Drawing.Size(32, 13);
-            this.labelLikesEvento.TabIndex = 21;
-            this.labelLikesEvento.Text = "Likes";
-            // 
-            // buttonSiguienteEvento
-            // 
-            this.buttonSiguienteEvento.Location = new System.Drawing.Point(216, 164);
-            this.buttonSiguienteEvento.Name = "buttonSiguienteEvento";
-            this.buttonSiguienteEvento.Size = new System.Drawing.Size(77, 25);
-            this.buttonSiguienteEvento.TabIndex = 2;
-            this.buttonSiguienteEvento.Text = "Siguiente Post";
-            this.buttonSiguienteEvento.UseVisualStyleBackColor = true;
-            this.buttonSiguienteEvento.Click += new System.EventHandler(this.buttonSiguienteEvento_Click);
-            // 
-            // textBoxContenidoEvento
-            // 
-            this.textBoxContenidoEvento.Location = new System.Drawing.Point(3, 28);
-            this.textBoxContenidoEvento.Multiline = true;
-            this.textBoxContenidoEvento.Name = "textBoxContenidoEvento";
-            this.textBoxContenidoEvento.ReadOnly = true;
-            this.textBoxContenidoEvento.Size = new System.Drawing.Size(250, 100);
-            this.textBoxContenidoEvento.TabIndex = 20;
-            this.textBoxContenidoEvento.Text = "Aquí dentro va el contenido de la propia publicación, en un inicio será solo text" +
-    "o";
-            // 
-            // labelEvento
-            // 
-            this.labelEvento.AutoSize = true;
-            this.labelEvento.Location = new System.Drawing.Point(5, 6);
-            this.labelEvento.Name = "labelEvento";
-            this.labelEvento.Size = new System.Drawing.Size(100, 13);
-            this.labelEvento.TabIndex = 0;
-            this.labelEvento.Text = "Nombre del Usuario";
             // 
             // panelCrearEvento
             // 
@@ -1182,26 +1196,14 @@
             this.labelCrearEvento.Text = "Crear Evento";
             this.labelCrearEvento.Click += new System.EventHandler(this.label5_Click);
             // 
-            // crearEventoToolStripMenuItem
+            // contextMenuStrip1
             // 
-            this.crearEventoToolStripMenuItem.Name = "crearEventoToolStripMenuItem";
-            this.crearEventoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.crearEventoToolStripMenuItem.Text = "Crear Evento";
-            this.crearEventoToolStripMenuItem.Click += new System.EventHandler(this.crearEventoToolStripMenuItem_Click);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // verPostToolStripMenuItem
+            // usuarioBindingSource
             // 
-            this.verPostToolStripMenuItem.Name = "verPostToolStripMenuItem";
-            this.verPostToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.verPostToolStripMenuItem.Text = "Ver Post";
-            this.verPostToolStripMenuItem.Click += new System.EventHandler(this.verPostToolStripMenuItem_Click);
-            // 
-            // verEventosToolStripMenuItem
-            // 
-            this.verEventosToolStripMenuItem.Name = "verEventosToolStripMenuItem";
-            this.verEventosToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.verEventosToolStripMenuItem.Text = "Ver Eventos";
-            this.verEventosToolStripMenuItem.Click += new System.EventHandler(this.verEventosToolStripMenuItem_Click);
+            this.usuarioBindingSource.DataSource = typeof(ProyectoApp.Usuario);
             // 
             // Form1
             // 
@@ -1210,7 +1212,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1572, 765);
+            this.ClientSize = new System.Drawing.Size(1572, 749);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -1225,8 +1227,11 @@
             this.menuStrip1.PerformLayout();
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.panelPostPrincipal.ResumeLayout(false);
             this.panelPostPrincipal.PerformLayout();
+            this.panelEventoPrincipal.ResumeLayout(false);
+            this.panelEventoPrincipal.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.panelVerPerfiles.ResumeLayout(false);
@@ -1238,12 +1243,9 @@
             this.panelCrearPost.ResumeLayout(false);
             this.panelCrearPost.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.panelEventoPrincipal.ResumeLayout(false);
-            this.panelEventoPrincipal.PerformLayout();
             this.panelCrearEvento.ResumeLayout(false);
             this.panelCrearEvento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
